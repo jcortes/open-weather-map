@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
     <title>Open Weather Map</title>
 </head>
 
-<body ng-app="owmApp">
+<body ng-app="owmApp" ng-class="{loading: isLoading}">
     <a href="/app/#/cities/New York">New York</a>
     <a href="/app/#/cities/Dallas">Dallas</a>
     <a href="/app/#/cities/Chicago">Chicago</a>
-    <div ng-view></div>
+    <div class="animate-view-container">
+        <div ng-view class="animate-view"></div>
+    </div>
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="js/owm-app.js"></script>
 </body>
 </html>
